@@ -26,5 +26,5 @@ The user interface is designed to be simple, safe, and easy to navigate, keeping
 Overall, KiddoLearn is an effective e-Learning solution that supports early childhood education by blending education and entertainment. The project demonstrates the practical use of frontend technologies to build an engaging, interactive, and visually appealing learning platform for children.
 
 #OUTPUT-
-
+![Image](https://github.com/user-attachments/assets/e7a3e902-8bcc-4694-8605-7341c3fd81b1)
 
