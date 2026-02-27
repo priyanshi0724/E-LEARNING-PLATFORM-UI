@@ -1,0 +1,1282 @@
+/* KiddoLearn - E-Learning Platform Styles */
+/* Colorful, Playful Design for Kids */
+
+:root {
+    --primary: #FF6B6B;
+    --secondary: #4ECDC4;
+    --accent-yellow: #FFE66D;
+    --accent-mint: #95E1D3;
+    --accent-pink: #F38181;
+    --background: #FFF9E6;
+    --text-primary: #2D3436;
+    --text-secondary: #636E72;
+    --success: #00B894;
+    --gold: #FFD93D;
+    --white: #FFFFFF;
+    --shadow-soft: 0 8px 25px rgba(255, 107, 107, 0.15);
+    --shadow-hover: 0 12px 35px rgba(255, 107, 107, 0.25);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--background);
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Animated Background */
+.bg-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.cloud {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50px;
+    animation: float-cloud 20s infinite linear;
+}
+
+.cloud::before, .cloud::after {
+    content: '';
+    position: absolute;
+    background: inherit;
+    border-radius: 50%;
+}
+
+.cloud-1 {
+    width: 100px;
+    height: 40px;
+    top: 10%;
+    animation-delay: 0s;
+}
+
+.cloud-1::before {
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: 15px;
+}
+
+.cloud-1::after {
+    width: 35px;
+    height: 35px;
+    top: -15px;
+    left: 50px;
+}
+
+.cloud-2 {
+    width: 80px;
+    height: 32px;
+    top: 25%;
+    animation-delay: -7s;
+    animation-duration: 25s;
+}
+
+.cloud-2::before {
+    width: 40px;
+    height: 40px;
+    top: -20px;
+    left: 10px;
+}
+
+.cloud-2::after {
+    width: 28px;
+    height: 28px;
+    top: -12px;
+    left: 40px;
+}
+
+.cloud-3 {
+    width: 120px;
+    height: 48px;
+    top: 5%;
+    animation-delay: -14s;
+    animation-duration: 30s;
+}
+
+.cloud-3::before {
+    width: 60px;
+    height: 60px;
+    top: -30px;
+    left: 20px;
+}
+
+.cloud-3::after {
+    width: 42px;
+    height: 42px;
+    top: -18px;
+    left: 60px;
+}
+
+@keyframes float-cloud {
+    0% { transform: translateX(-100px); }
+    100% { transform: translateX(calc(100vw + 100px)); }
+}
+
+.star {
+    position: absolute;
+    font-size: 20px;
+    color: var(--gold);
+    animation: twinkle 3s infinite ease-in-out;
+}
+
+.star-1 { top: 15%; left: 20%; animation-delay: 0s; }
+.star-2 { top: 30%; left: 70%; animation-delay: 1s; }
+.star-3 { top: 60%; left: 40%; animation-delay: 2s; }
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* Navigation */
+.navbar {
+    background: linear-gradient(135deg, var(--primary), var(--accent-pink));
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-soft);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.logo-icon {
+    font-size: 36px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.logo-text {
+    font-family: 'Fredoka One', cursive;
+    font-size: 28px;
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-link {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 30px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    background: var(--accent-yellow);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.kid-name {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+/* Hero Section */
+.hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-title {
+    font-family: 'Fredoka One', cursive;
+    font-size: 52px;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.highlight {
+    color: var(--primary);
+    position: relative;
+}
+
+.highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: var(--accent-yellow);
+    z-index: -1;
+    border-radius: 8px;
+    opacity: 0.6;
+}
+
+.hero-subtitle {
+    font-size: 22px;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 32px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-family: 'Nunito', sans-serif;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--accent-pink));
+    color: var(--white);
+    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 30px rgba(255, 107, 107, 0.5);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, var(--secondary), var(--accent-mint));
+    color: var(--white);
+    box-shadow: 0 8px 20px rgba(78, 205, 196, 0.4);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 30px rgba(78, 205, 196, 0.5);
+}
+
+.btn-outline {
+    background: var(--white);
+    color: var(--primary);
+    border: 3px solid var(--primary);
+}
+
+.btn-outline:hover {
+    background: var(--primary);
+    color: var(--white);
+    transform: scale(1.05);
+}
+
+.hero-mascot {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.mascot {
+    font-size: 150px;
+    animation: mascot-bounce 2s infinite ease-in-out;
+}
+
+@keyframes mascot-bounce {
+    0%, 100% { transform: translateY(0) rotate(-5deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+.speech-bubble {
+    position: absolute;
+    top: -20px;
+    right: -80px;
+    background: var(--white);
+    padding: 15px 25px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-primary);
+    box-shadow: var(--shadow-soft);
+    animation: bubble-pulse 2s infinite;
+}
+
+.speech-bubble::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 15px solid transparent;
+    border-right-color: var(--white);
+}
+
+@keyframes bubble-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Stats Section */
+.stats-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-yellow);
+}
+
+.stat-card:nth-child(1):hover { border-color: var(--gold); }
+.stat-card:nth-child(2):hover { border-color: var(--secondary); }
+.stat-card:nth-child(3):hover { border-color: var(--primary); }
+.stat-card:nth-child(4):hover { border-color: var(--accent-mint); }
+
+.stat-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.stat-number {
+    font-family: 'Fredoka One', cursive;
+    font-size: 42px;
+    color: var(--primary);
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+/* Featured Section */
+.featured-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.section-title {
+    font-family: 'Fredoka One', cursive;
+    font-size: 36px;
+    text-align: center;
+    color: var(--text-primary);
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '🌟';
+    position: absolute;
+    right: calc(50% - 100px);
+    bottom: -10px;
+    font-size: 24px;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.course-card {
+    background: var(--white);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 4px solid transparent;
+}
+
+.course-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--accent-yellow);
+}
+
+.course-image {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+}
+
+.course-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.course-card:hover .course-image img {
+    transform: scale(1.1);
+}
+
+.category-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--white);
+    z-index: 2;
+}
+
+.animals { background: linear-gradient(135deg, #E17055, #FAB1A0); }
+.abc { background: linear-gradient(135deg, #6C5CE7, #A29BFE); }
+.numbers { background: linear-gradient(135deg, #00B894, #55EFC4); }
+.colors { background: linear-gradient(135deg, #FD79A8, #FDCBDF); }
+.shapes { background: linear-gradient(135deg, #FDCB6E, #FFEAA7); }
+
+.course-info {
+    padding: 20px;
+}
+
+.course-info h3 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 22px;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.course-info p {
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.course-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.stars {
+    color: var(--gold);
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.lessons {
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.progress-bar {
+    height: 12px;
+    background: #EEE;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--secondary), var(--accent-mint));
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
+
+.progress-text {
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-weight: 700;
+}
+
+.see-more {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Activities Section */
+.activities-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.activity-card {
+    border-radius: 24px;
+    padding: 30px 20px;
+    text-align: center;
+    color: var(--white);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-soft);
+}
+
+.activity-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: var(--shadow-hover);
+}
+
+.activity-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.activity-card h3 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.activity-card p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(135deg, var(--secondary), var(--accent-mint));
+    padding: 30px;
+    text-align: center;
+    color: var(--white);
+    margin-top: 60px;
+}
+
+.footer p {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 5px 0;
+}
+
+/* Courses Page Styles */
+.page-header {
+    background: linear-gradient(135deg, var(--primary), var(--accent-pink));
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.page-title {
+    font-family: 'Fredoka One', cursive;
+    font-size: 42px;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.page-subtitle {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+}
+
+.filter-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    padding: 12px 24px;
+    border-radius: 25px;
+    border: 3px solid var(--secondary);
+    background: var(--white);
+    color: var(--secondary);
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Nunito', sans-serif;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: var(--secondary);
+    color: var(--white);
+    transform: scale(1.05);
+}
+
+.search-box {
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 15px 50px 15px 25px;
+    border-radius: 30px;
+    border: 3px solid var(--secondary);
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.2);
+}
+
+.search-box button {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--secondary);
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.search-box button:hover {
+    background: var(--primary);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.all-courses {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+}
+
+/* Course Detail Page */
+.course-detail {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--secondary);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    color: var(--primary);
+    transform: translateX(-5px);
+}
+
+.course-detail-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.video-player {
+    background: var(--white);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    background: #000;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #1a1a2e;
+    gap: 20px;
+}
+
+.video-thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+.watch-video-btn {
+    position: relative;
+    z-index: 2;
+    padding: 18px 36px;
+    background: linear-gradient(135deg, #FF6B6B, #F38181);
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+}
+
+.watch-video-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 35px rgba(255, 107, 107, 0.5);
+}
+
+.video-info {
+    padding: 25px;
+}
+
+.video-info h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 32px;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+}
+
+.video-info p {
+    color: var(--text-secondary);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.lesson-nav {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.lesson-nav button {
+    flex: 1;
+    padding: 14px 20px;
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Nunito', sans-serif;
+}
+
+.btn-prev {
+    background: #EEE;
+    color: var(--text-secondary);
+}
+
+.btn-prev:hover {
+    background: var(--secondary);
+    color: var(--white);
+}
+
+.btn-next {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.btn-next:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
+}
+
+.btn-complete {
+    background: linear-gradient(135deg, var(--success), #55EFC4);
+    color: var(--white);
+    width: 100%;
+    margin-top: 15px;
+    box-shadow: 0 8px 20px rgba(0, 184, 148, 0.4);
+}
+
+.btn-complete:hover {
+    transform: scale(1.02);
+}
+
+/* Sidebar */
+.course-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: var(--shadow-soft);
+}
+
+.sidebar-card h3 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 20px;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+}
+
+.lesson-list {
+    list-style: none;
+}
+
+.lesson-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lesson-item:hover {
+    background: #F8F9FA;
+}
+
+.lesson-item.active {
+    background: linear-gradient(135deg, var(--secondary), var(--accent-mint));
+    color: var(--white);
+}
+
+.lesson-item.completed {
+    opacity: 0.7;
+}
+
+.lesson-number {
+    width: 30px;
+    height: 30px;
+    background: #EEE;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.lesson-item.completed .lesson-number {
+    background: var(--success);
+    color: var(--white);
+}
+
+.lesson-item.active .lesson-number {
+    background: var(--white);
+    color: var(--secondary);
+}
+
+.lesson-title {
+    flex: 1;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.lesson-check {
+    color: var(--success);
+    font-size: 18px;
+}
+
+/* Progress Page */
+.progress-header {
+    background: linear-gradient(135deg, var(--gold), #FFE066);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.progress-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.progress-card {
+    background: var(--white);
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: var(--shadow-soft);
+}
+
+.progress-card h3 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 24px;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.circular-progress {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    position: relative;
+}
+
+.circular-progress svg {
+    transform: rotate(-90deg);
+}
+
+.circular-progress circle {
+    fill: none;
+    stroke-width: 12;
+}
+
+.circular-progress .bg {
+    stroke: #EEE;
+}
+
+.circular-progress .progress {
+    stroke: var(--secondary);
+    stroke-linecap: round;
+    transition: stroke-dashoffset 1s ease;
+}
+
+.progress-percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Fredoka One', cursive;
+    font-size: 36px;
+    color: var(--secondary);
+}
+
+.stars-display {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.star-item {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--gold), #FFE066);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    box-shadow: 0 4px 15px rgba(255, 217, 61, 0.4);
+    animation: star-glow 2s infinite;
+}
+
+.star-item.earned {
+    animation: star-pulse 1s infinite;
+}
+
+@keyframes star-glow {
+    0%, 100% { box-shadow: 0 4px 15px rgba(255, 217, 61, 0.4); }
+    50% { box-shadow: 0 4px 25px rgba(255, 217, 61, 0.6); }
+}
+
+@keyframes star-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.badges-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.badge-item {
+    text-align: center;
+    padding: 15px;
+    border-radius: 16px;
+    background: #F8F9FA;
+    transition: all 0.3s ease;
+}
+
+.badge-item.earned {
+    background: linear-gradient(135deg, var(--accent-yellow), #FFF9E6);
+}
+
+.badge-icon {
+    font-size: 40px;
+    margin-bottom: 8px;
+}
+
+.badge-name {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+
+.badge-item.earned .badge-name {
+    color: var(--text-primary);
+}
+
+.activity-chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+    height: 150px;
+    padding-top: 20px;
+}
+
+.chart-bar {
+    flex: 1;
+    background: linear-gradient(180deg, var(--secondary), var(--accent-mint));
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    transition: all 0.3s ease;
+    min-height: 20px;
+}
+
+.chart-bar:hover {
+    transform: scaleY(1.05);
+    box-shadow: 0 -5px 20px rgba(78, 205, 196, 0.4);
+}
+
+.chart-label {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+
+.streak-card {
+    text-align: center;
+}
+
+.streak-icon {
+    font-size: 80px;
+    animation: fire-bounce 1s infinite;
+}
+
+@keyframes fire-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.streak-number {
+    font-family: 'Fredoka One', cursive;
+    font-size: 64px;
+    color: var(--primary);
+    line-height: 1;
+}
+
+.streak-label {
+    font-size: 20px;
+    color: var(--text-secondary);
+    font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .course-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .activities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .course-detail-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .progress-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-title {
+        font-size: 36px;
+    }
+    
+    .hero-mascot {
+        order: -1;
+    }
+    
+    .mascot {
+        font-size: 100px;
+    }
+    
+    .speech-bubble {
+        right: 0;
+        top: -30px;
+    }
+    
+    .stats-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .activities-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-menu {
+        display: none;
+    }
+    
+    .profile-section {
+        display: none;
+    }
+    
+    .filter-buttons {
+        gap: 10px;
+    }
+    
+    .filter-btn {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+    
+    .badges-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.course-card, .stat-card, .activity-card, .progress-card {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.course-card:nth-child(1) { animation-delay: 0.1s; }
+.course-card:nth-child(2) { animation-delay: 0.2s; }
+.course-card:nth-child(3) { animation-delay: 0.3s; }
+
+.stat-card:nth-child(1) { animation-delay: 0.1s; }
+.stat-card:nth-child(2) { animation-delay: 0.2s; }
+.stat-card:nth-child(3) { animation-delay: 0.3s; }
+.stat-card:nth-child(4) { animation-delay: 0.4s; }

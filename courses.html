@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KiddoLearn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="cloud cloud-3"></div>
+        <div class="star star-1">★</div>
+        <div class="star star-2">★</div>
+        <div class="star star-3">★</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🎈</span>
+                <span class="logo-text">KiddoLearn</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">🏠 Home</a></li>
+                <li><a href="courses.html" class="nav-link active">📚 Courses</a></li>
+                <li><a href="progress.html" class="nav-link">⭐ Progress</a></li>
+            </ul>
+            <div class="profile-section">
+                <div class="avatar">🐻</div>
+                <span class="kid-name">Little Star</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <h1 class="page-title">📚 All Courses 📚</h1>
+        <p class="page-subtitle">Pick a fun lesson and start learning!</p>
+    </header>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-category="all">✨ All</button>
+            <button class="filter-btn" data-category="animals">🐾 Animals</button>
+            <button class="filter-btn" data-category="abc">🔤 ABCs</button>
+            <button class="filter-btn" data-category="numbers">🔢 Numbers</button>
+            <button class="filter-btn" data-category="colors">🎨 Colors</button>
+            <button class="filter-btn" data-category="shapes">🔷 Shapes</button>
+            <button class="filter-btn" data-category="songs">🎵 Songs</button>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="🔍 Search for fun courses...">
+            <button>🔍</button>
+        </div>
+    </section>
+
+    <!-- Courses Grid -->
+    <section class="all-courses">
+        <div class="course-grid" id="coursesGrid">
+            <!-- Courses will be rendered by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>🎉 Made with love for little learners! 🎉</p>
+        <p>© 2024 KiddoLearn - Learn, Play, Grow!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

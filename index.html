@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KiddoLearn - Fun Learning for Kids!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="cloud cloud-3"></div>
+        <div class="star star-1">★</div>
+        <div class="star star-2">★</div>
+        <div class="star star-3">★</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🎈</span>
+                <span class="logo-text">KiddoLearn</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">🏠 Home</a></li>
+                <li><a href="courses.html" class="nav-link">📚 Courses</a></li>
+                <li><a href="progress.html" class="nav-link">⭐ Progress</a></li>
+            </ul>
+            <div class="profile-section">
+                <div class="avatar">🐻</div>
+                <span class="kid-name">Little Star</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to <span class="highlight">KiddoLearn!</span> 🌈</h1>
+            <p class="hero-subtitle">Learn fun things with colorful videos and games!</p>
+            <div class="hero-buttons">
+                <a href="courses.html" class="btn btn-primary">Start Learning! 🚀</a>
+                <a href="progress.html" class="btn btn-secondary">See My Stars ⭐</a>
+            </div>
+        </div>
+        <div class="hero-mascot">
+            <div class="mascot">🦊</div>
+            <div class="speech-bubble">Let's learn together!</div>
+        </div>
+    </section>
+
+    <!-- Quick Stats -->
+    <section class="stats-section">
+        <div class="stat-card">
+            <div class="stat-icon">⭐</div>
+            <div class="stat-number" id="totalStars">12</div>
+            <div class="stat-label">Stars Earned</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">🏅</div>
+            <div class="stat-number" id="totalBadges">3</div>
+            <div class="stat-label">Badges Won</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">📚</div>
+            <div class="stat-number" id="coursesCompleted">2</div>
+            <div class="stat-label">Courses Done</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">🔥</div>
+            <div class="stat-number" id="streak">5</div>
+            <div class="stat-label">Day Streak!</div>
+        </div>
+    </section>
+
+    <!-- Featured Courses -->
+    <section class="featured-section">
+        <h2 class="section-title">✨ Featured Courses ✨</h2>
+        <div class="course-grid">
+            <div class="course-card" onclick="window.location.href='course-detail.html?id=1'">
+                <div class="course-image">
+                    <span class="category-badge animals">🐾 Animals</span>
+                    <img src="https://images.unsplash.com/photo-1474511320723-9a56873571b7?w=400" alt="Animals">
+                </div>
+                <div class="course-info">
+                    <h3>🐶 Animal Friends</h3>
+                    <p>Learn about cute animals from around the world!</p>
+                    <div class="course-meta">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <span class="lessons">8 Lessons</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 60%"></div>
+                    </div>
+                    <span class="progress-text">60% Complete</span>
+                </div>
+            </div>
+
+            <div class="course-card" onclick="window.location.href='course-detail.html?id=2'">
+                <div class="course-image">
+                    <span class="category-badge abc">🔤 ABCs</span>
+                    <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=400" alt="ABC">
+                </div>
+                <div class="course-info">
+                    <h3>🔤 Learn ABCs</h3>
+                    <p>Fun songs to learn all the letters!</p>
+                    <div class="course-meta">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <span class="lessons">10 Lessons</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 30%"></div>
+                    </div>
+                    <span class="progress-text">30% Complete</span>
+                </div>
+            </div>
+
+            <div class="course-card" onclick="window.location.href='course-detail.html?id=3'">
+                <div class="course-image">
+                    <span class="category-badge numbers">🔢 Numbers</span>
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400" alt="Numbers">
+                </div>
+                <div class="course-info">
+                    <h3>🔢 Counting 1-20</h3>
+                    <p>Count along with fun animations!</p>
+                    <div class="course-meta">
+                        <div class="stars">⭐⭐⭐⭐</div>
+                        <span class="lessons">12 Lessons</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%"></div>
+                    </div>
+                    <span class="progress-text">Not Started</span>
+                </div>
+            </div>
+        </div>
+        <div class="see-more">
+            <a href="courses.html" class="btn btn-outline">See All Courses 📚</a>
+        </div>
+    </section>
+
+    <!-- Fun Activities -->
+    <section class="activities-section">
+        <h2 class="section-title">🎨 More Fun Activities 🎨</h2>
+        <div class="activities-grid">
+            <div class="activity-card" style="background: linear-gradient(135deg, #FF6B6B, #FF8E8E);">
+                <div class="activity-icon">🎨</div>
+                <h3>Colors</h3>
+                <p>Learn beautiful colors!</p>
+            </div>
+            <div class="activity-card" style="background: linear-gradient(135deg, #4ECDC4, #6EE7DE);">
+                <div class="activity-icon">🔷</div>
+                <h3>Shapes</h3>
+                <p>Find circles, squares & more!</p>
+            </div>
+            <div class="activity-card" style="background: linear-gradient(135deg, #FFE66D, #FFF09A);">
+                <div class="activity-icon">🎵</div>
+                <h3>Songs</h3>
+                <p>Sing along with music!</p>
+            </div>
+            <div class="activity-card" style="background: linear-gradient(135deg, #95E1D3, #B5EDE4);">
+                <div class="activity-icon">🎮</div>
+                <h3>Games</h3>
+                <p>Play fun learning games!</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>🎉 Made with love for little learners! 🎉</p>
+        <p>© 2024 KiddoLearn - Learn, Play, Grow!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

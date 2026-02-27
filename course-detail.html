@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> KiddoLearn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="cloud cloud-3"></div>
+        <div class="star star-1">★</div>
+        <div class="star star-2">★</div>
+        <div class="star star-3">★</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🎈</span>
+                <span class="logo-text">KiddoLearn</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">🏠 Home</a></li>
+                <li><a href="courses.html" class="nav-link">📚 Courses</a></li>
+                <li><a href="progress.html" class="nav-link">⭐ Progress</a></li>
+            </ul>
+            <div class="profile-section">
+                <div class="avatar">🐻</div>
+                <span class="kid-name">Little Star</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Course Detail -->
+    <main class="course-detail">
+        <a href="courses.html" class="back-link">⬅️ Back to Courses</a>
+        
+        <div class="course-detail-grid">
+            <!-- Video Player Section -->
+            <div class="video-section">
+                <div class="video-player">
+                    <div class="video-wrapper">
+                        <!-- Video will be embedded here by JavaScript -->
+                    </div>
+                    <div class="video-info">
+                        <!-- Video info will be rendered by JavaScript -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sidebar -->
+            <aside class="course-sidebar">
+                <div class="sidebar-card">
+                    <h3>📋 Lessons</h3>
+                    <ul class="lesson-list">
+                        <!-- Lesson list will be rendered by JavaScript -->
+                    </ul>
+                </div>
+                
+                <div class="sidebar-card">
+                    <h3>🎯 Your Progress</h3>
+                    <div class="progress-bar" style="margin-bottom: 10px;">
+                        <div class="progress-fill" style="width: 60%"></div>
+                    </div>
+                    <span class="progress-text">Keep going! You're doing great!</span>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>🎉 Made with love for little learners! 🎉</p>
+        <p>© 2024 KiddoLearn - Learn, Play, Grow!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
